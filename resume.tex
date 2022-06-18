@@ -1,0 +1,148 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Ye Lin Aung}}\\
+	Singapore $\cdot$ me@yelinaung.com $\cdot$ +6597806044 $\cdot$ www.yelinaung.com\\
+\end{center}
+
+%==== Education ====%
+\header{BSc Hons (Business Information Technology)}
+\textbf{University of Greenwich}\hfill London, England\\
+BSc Business Information Technology \hfill 2010 - 2013\\
+\vspace{2mm}
+
+%==== Experience ====%
+\header{Employment}
+\vspace{1mm}
+
+\textbf{99 Group} \hfill Singapore\\
+\textit{Chief Software Architect} \hfill Nov 2021 - Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Understand the long-term business objectives and act as the tech adviser for the multiple Product team with architecture, implementation and provide context
+	\item Lead the 99 Group infrastructure team by planning the roadmap, prioritise the tasks for the team
+	\item Work closely with the different engineering team leads and provide them with technical suggestions, plan the engineering roadmaps
+	\item Hands-on implementation to improve the the development process, CI/CD process and cost saving efforts.
+\end{itemize}
+\textbf{99 Group} \hfill Singapore\\
+\textit{Backend and Infra Lead (Senior Software Engineer)} \hfill April 2020 - Nov 2021\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Led both backend and infrastructure pillars of 99.co Singapore Team. Responsible for designing API and microservices.
+	\item Maintaining the backend infrastructure on Kubernetes (with GKE) on GCP, CloudBuild, CloudSQL + Infra on AWS (RDS, EC2)
+	\item Mentor, guide and conduct regular 1-1s with the team members (up to 15 members) to learn about the pain points, build trust, provide feedback (2 ways)
+\end{itemize}
+\textbf{99 Group} \hfill Singapore\\
+\textit{Full Stack Software Engineer} \hfill March 2016 - Oct 2021\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Started as an Android Engineer to work on 99.co Singapore application
+	\item Worked on 99.co Indonesia backend/data import/API/client Android app
+	\item Shift to focus on the 99.co Backend services
+\end{itemize}
+\textbf{Zwenexsys Intl Ltd} \hfill Yangon, Myanmar\\
+\textit{Software Engineer} \hfill Jan 2013 - Dec 2015\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Responsible to support and handle the general software / hardware problems. Assigned to work on standalone projects
+	\item Responsible to support and handle the general software / hardware problems. Assigned to work on standalone projects
+\end{itemize}
+
+\header{Projects}
+{\textbf{Subscription and Wallet System}} {\sl Python, Tornado, Mongo, Redis} \\
+Subscription service is the critical part of the business as it involves dealing with money. Later on, I developed the internal wallet system that allows people to buy (credit), spend (debit) the currecy.\\
+\vspace*{2mm}
+{\textbf{99.co Infrastructure}} {\sl GCP, GKE, CloudSQL, Terraform, AWS} \\
+Maintain and improve the multiple components of the 99.co Infrastructure across AWS and GCP clouds\\
+\vspace*{2mm}
+
+\header{Technical Skills}
+\begin{tabular}{ l l }
+	Programming Languages: & Bash, Python, YAML, Java, Kotlin, SQL.                                         \\
+	Databases:             & PostgreSQL, MongoDB, Redis, ElasticSearch                                      \\
+	Other technologies:    & Git, Kubernetes, Docker, Linux, Terraform, GCP, AWS, Istio, Nginx, CI/CD Tools \\
+\end{tabular}
+\vspace{2mm}
+
+\header{Certificates}
+\textbf{CKAD} \hfill Linux Foundation\\
+I studied and took the exam to learn more about different parts of K8s in a structured way and to challenge, validate and test my existing knowledge \hfill 2021\\
+\vspace*{2mm}
+\textbf{CKA} \hfill Linux Foundation\\
+I studied and took the exam to learn more about bootstrapping the Kubernetes cluster from scratch, doing upgrades and to learn the different Kubernetes components (etcd, api-server, etc) \hfill 2022\\
+\vspace*{2mm}
+
+\ 
+\end{document}
